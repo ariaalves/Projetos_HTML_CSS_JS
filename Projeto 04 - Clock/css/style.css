@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    background: #25252d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analog-clock{
+    background: #2d2f41;
+    position: relative;
+    width: 460px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+}
+
+.analog-clock::before{
+    z-index: 000;
+}
+
+.analog-clock ul{
+    list-style: none;
+}
+.hour-container{
+    width: 460px;
+}
+.hour-numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hour-numbers li{
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+.num{
+    color: #cee0f6;
+    font-size: 1.6em;
+    font-weight: 400;
+    margin: 10px;
+}
+
+.hour-numbers li:nth-child(1){
+    transform: rotate(90deg);
+}
+
+.hour-numbers li:nth-child(2){
+    transform: rotate(180deg);
+}
+
+.hour-numbers li:nth-child(3){
+    transform: rotate(270deg);
+}
+
+.hour-numbers li:nth-child(1) .num{
+    transform: rotate(-90deg);
+}
+
+.hour-numbers li:nth-child(2) .num{
+    transform: rotate(-180deg);
+}
+
+.hour-numbers li:nth-child(3) .num{
+    transform: rotate(-270deg);
+}
+
+.hour-marks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mark{
+    background: #cee0f6;
+    width: 1px;
+    margin-top: 8px;
+    height: 19px;
+}
+
+.hour-marks li{
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.hour-marks li:nth-child(1){
+    transform: rotate(30deg);
+}
+
+.hour-marks li:nth-child(2){
+    transform: rotate(60deg);
+}
+
+.hour-marks li:nth-child(3){
+    transform: rotate(120deg);
+}
+
+.hour-marks li:nth-child(4){
+    transform: rotate(150deg);
+}
+
+.hour-marks li:nth-child(5){
+    transform: rotate(210deg);
+}
+
+.hour-marks li:nth-child(6){
+    transform: rotate(240deg);
+}
+
+.hour-marks li:nth-child(7){
+    transform: rotate(300deg);
+}
+
+.hour-marks li:nth-child(8){
+    transform: rotate(330deg);
+}
+
+.middle-lines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle-lines .line{
+    background: #cee0f6;
+    width: 1px;
+    height: 140px;
+    opacity: 0.2;
+    margin-top: 55px;
+}
+
+.middle-lines li{
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.middle-lines li:nth-child(1){
+    transform: rotate(90deg);
+}
+
+.middle-lines li:nth-child(2){
+    transform: rotate(180deg);
+}
+
+.middle-lines li:nth-child(3){
+    transform: rotate(270deg);
+}
+
+.hands-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand{
+    z-index: 888;
+    position: absolute;
+}
+
+.hr-hand{
+    width: 12px;
+    height: 280px;
+    transform: rotate(240deg);
+}
+
+.hr-hand::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(
+        243.18deg,
+        #72023e 0%,
+        #3e0638 16.21%,
+        #030a31 44.79%,
+        #02061c 70.83%,
+        #000000 93.23%
+      );
+
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(2,2,2,0.5);
+}
+
+.min-hand{
+    width: 8px;
+    height: 320px;
+    transform: rotate(30deg);
+}
+
+.min-hand::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(
+        243.18deg,
+        #72023e 0%,
+        #4668c4 16.21%,
+        #030a31 44.79%,
+        #02061c 70.83%,
+        #000000 93.23%
+      );
+
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(2,2,2,0.5);
+}
+
+.sec-hand{
+    width: 5px;
+    height: 335px;
+    transform: rotate(90deg);
+}
+
+.sec-hand::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(
+        243.18deg,
+        #72023e 0%,
+        #c53bb7 16.21%,
+        #030a31 44.79%,
+        #1a214d 70.83%,
+        #000000 93.23%
+      );
+
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(2,2,2,0.5);
+    
+}
+
+.center-dot{
+    z-index: 999;
+    position: absolute;
+    background: #cee0f6;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 4px solid #0c113a;
+}
+
+
+
