@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icons8-cérebro-16.png" type="image/x-icon">
+    <title>Aprenda Fácil</title>
+</head>
+
+<body>
+    <nav class="nav_bar">
+        <a href="index.html">
+            <h1 class="logo">Aprenda Fácil</h1>
+        </a>
+        <ul class="links">
+            <li><a class="home" href="index.html">Home</a></li>
+            <li><a href="#">Trilhas</a></li>
+            <li><a href="#">Área do aluno</a></li>
+            <li><a href="contato.html">Contatos</a></li>
+            <li><a href="#">Sobre nós</a></li>
+        </ul>
+    </nav>
+    <div class="fale_conosco">
+            <form onsubmit="sendEmail(); reset(); return false;" >
+                <h3>Fale conosco</h3>
+                <input type="text" id="name" placeholder="Seu nome completo" required>
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+                <input type="text" id="phone" placeholder="Seu número de telefone" required>
+                <textarea  id="message" rows="4" placeholder="Digite aqui a sua dúvida"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
